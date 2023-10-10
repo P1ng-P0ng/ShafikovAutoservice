@@ -18,3 +18,10 @@ C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\S
 C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\obj\Debug\ShafikovAutoservice.exe
 C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\obj\Debug\ShafikovAutoservice.pdb
 C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\obj\Debug\App.baml
+C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\bin\Debug\EntityFramework.dll
+C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\bin\Debug\EntityFramework.SqlServer.dll
+C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\bin\Debug\EntityFramework.xml
+C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\bin\Debug\EntityFramework.SqlServer.xml
+C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\bin\Debug\ru\EntityFramework.resources.dll
+C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\obj\Debug\ShafikovAutoservice_Content.g.cs
+C:\Программирование 3 курс\Autoservice\ShafikovAutoservice\ShafikovAutoservice\obj\Debug\ShafikovAutoservice.csproj.CopyComplete

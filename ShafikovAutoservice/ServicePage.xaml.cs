@@ -23,6 +23,10 @@ namespace ShafikovAutoservice
         public ServicePage()
         {
             InitializeComponent();
+
+            var currentServices = Shafikov_AutoserviceEntities.GetContext().Service.ToList();
+
+            ServiceListView.ItemsSource = currentServices;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
