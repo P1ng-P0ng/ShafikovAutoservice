@@ -42,20 +42,50 @@ namespace ShafikovAutoservice
                 errors.AppendLine("Укажите стоимость услуи");
 
             //
-            if (string.IsNullOrWhiteSpace(Convert.ToString(_currentServise.Discount)))
+            if (string.IsNullOrWhiteSpace(Convert.ToString(_currentServise.Discount)) || _currentServise.Discount < 0 || _currentServise.Discount > 100)
                 errors.AppendLine("Укажите скидку");
 
-            if (string.IsNullOrWhiteSpace(_currentServise.DurationInSeconds))
+            if (string.IsNullOrWhiteSpace(Convert.ToString(_currentServise.DurationInSeconds)) || _currentServise.DurationInSeconds == 0)
                 errors.AppendLine("Укажите длительность услуги");
 
-            if(errors.Length > 0)
+            if (_currentServise.DurationInSeconds > 240)
+                errors.AppendLine("Длительность не может быть больше 240 минут");
+
+            if (_currentServise.DurationInSeconds < 0)
+                errors.AppendLine("Длительность не может быть меньше 0 минут");
+
+            if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
 
+
+            var allServices = Shafikov_AutoserviceEntities.GetContext().Service.ToList();
+            allServices = allServices.Where(p => p.Title == _currentServise.Title).ToList();
+
+            if(allServices.Count == 0 || (_currentServise.ID != 0 && allServices.Count <= 1))
+            {
+                if (_currentServise.ID == 0)
+                    Shafikov_AutoserviceEntities.GetContext().Service.Add(_currentServise);
+                try
+                {
+                    Shafikov_AutoserviceEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Информация сохранена");
+                    Manager.MainFrame.GoBack();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Уже существует такая услуга");
+            }
+
             //добавить в контекст текущие значения новой услуги
-            if (_currentServise.ID == 0)
+            /*if (_currentServise.ID == 0)
                 Shafikov_AutoserviceEntities.GetContext().Service.Add(_currentServise);
 
             //сохранить изменения, если никаких ошибок не было
@@ -68,7 +98,7 @@ namespace ShafikovAutoservice
             catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message.ToString());
-            }
+            }*/
         }
     }
 }

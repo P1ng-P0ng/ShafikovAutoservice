@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="53e54785c24348ce9cc870009a2aa1be" Name="Diagram1">
+      <Diagram DiagramId="cd2abf27ba2b4376bf018cfa61e7d9a6" Name="Diagram1">
         <EntityTypeShape EntityType="Shafikov_AutoserviceModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Shafikov_AutoserviceModel.ClientService" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Shafikov_AutoserviceModel.DocumentByService" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
@@ -18,13 +18,13 @@
         <EntityTypeShape EntityType="Shafikov_AutoserviceModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.FK_client_a_import_Gender" ManuallyRouted="false" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.FK_ClientService_client_a_import" ManuallyRouted="false" />
-        <AssociationConnector Association="Shafikov_AutoserviceModel.FK_ClientService_service_a_import" ManuallyRouted="false" />
+        <AssociationConnector Association="Shafikov_AutoserviceModel.FK_ClientService_Service" ManuallyRouted="false" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.FK_Product_Manufacturer" ManuallyRouted="false" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.FK_ProductSale_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="Shafikov_AutoserviceModel.FK_ServicePhoto_service_a_import" ManuallyRouted="false" />
+        <AssociationConnector Association="Shafikov_AutoserviceModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.AttachedProduct" ManuallyRouted="false" />
         <AssociationConnector Association="Shafikov_AutoserviceModel.TagOfClient" ManuallyRouted="false" />
       </Diagram>

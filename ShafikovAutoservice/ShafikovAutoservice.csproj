@@ -77,6 +77,7 @@
     <Compile Include="DocumentByService.cs">
       <DependentUpon>ShafikovModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditCheck.cs" />
     <Compile Include="Gender.cs">
       <DependentUpon>ShafikovModel.tt</DependentUpon>
     </Compile>
@@ -117,6 +118,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ShafikovModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tag.cs">
       <DependentUpon>ShafikovModel.tt</DependentUpon>
     </Compile>
@@ -137,6 +141,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,22 +206,24 @@
     <Resource Include="Услуги автосервиса\Электрика.png" />
     <Resource Include="Resources\service_logo.png" />
     <Resource Include="Resources\picture.jpg" />
-    <Content Include="ShafikovModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ShafikovModel.Context.cs</LastGenOutput>
-      <DependentUpon>ShafikovModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="ShafikovModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShafikovModel.edmx</DependentUpon>
-      <LastGenOutput>ShafikovModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ShafikovModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShafikovModel.edmx</DependentUpon>
+      <LastGenOutput>ShafikovModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ShafikovModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShafikovModel.edmx</DependentUpon>
+      <LastGenOutput>ShafikovModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
